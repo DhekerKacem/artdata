@@ -1,0 +1,15 @@
+import requests
+
+# URL de la page
+url = "https://app.vivadata.org/courses/02-Git-and-GitHub"
+
+# Envoyer une requête GET à l'URL
+response = requests.get(url)
+
+# Vérifier si la requête a réussi
+if response.status_code == 200:
+    print("Requête réussie !")
+    print(response.text)  # Afficher le contenu de la réponse
+else:
+    print(f"Erreur : {response.status_code}")
+
